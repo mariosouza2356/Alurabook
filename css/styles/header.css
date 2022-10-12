@@ -1,0 +1,136 @@
+
+.cabecalho__menu-amburguer {
+    width:40px;
+    height:40px;
+    background-image:url("../../imagens/Menu.svg");
+    background-repeat:no repeat;
+    display:inline-block;
+    position:relative;
+}
+.immg {
+    margin-left:20px;
+}
+.cabecalho {
+    background-color:var(--branco);
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    align-items: center;
+}
+.lista-menu {
+    display:none;
+    position:absolute;
+    width:60vw;
+    position:left 0;
+}
+.container__botao:checked ~ .lista-menu {
+    display:block;
+}
+.lista-menu__titulo,
+.lista-menu__item {
+    padding:1rem;
+    background-color:var(--branco);
+}
+.lista-menu__titulo {
+    color:var(--laranja);
+    text-transform:uppercase;
+    font-weight:500;
+}
+.lista-menu__link {
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:500;
+    background-color:var(--azul-degrade);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.container__botao,
+.container__titulo,
+.opcoes, 
+.opcoes__botao {
+    display:none;
+}
+
+.container__texto {
+    display:none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display:flex;
+    }
+    .container__titulo {
+        display:block;
+        font-size:30px;
+        font-weight:400;
+        margin-left:30px;
+    }
+    .container__titulo-negrito {
+        font-size:30px;
+        font-weight:700;
+    }
+    .opcoes {
+        display:flex;
+        
+    }
+    .opcoes__item {
+        padding:0 1em;
+        text-transform:uppercase;
+        font-size:18px;
+        font-weight:400;
+    }
+    .opcoes__link {
+        text-decoration:none;
+        font-size:18px;
+        font-weight:400;
+        color:#000;
+    }
+    .cabecalho__menu-amburguer {
+        display:none;
+    }
+    .container__favoritos {
+        display:none;
+    }
+    .opcoes__botao:checked ~ .lista-menu {
+        display:block;
+        width:auto;
+        margin-top:60px;
+    }
+    .opcoes__botao:checked ~ .opcoes__rotulo>.opcoes__item {
+        background: var(--azul-degrade);
+        color:var(--branco);
+    }
+    .opcoes__item {
+        padding: 2em 1em;
+    }
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+    .lista-menu__item:hover >.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration:none;
+    }
+}
+
+
+
+
+@media screen and (min-width:1728px) {
+    .container__link {
+        display:flex;
+        align-items:center;
+        text-decoration:none;
+        color:#000;
+    }
+    .cabecalho {
+        padding: 2em 2em;
+    }
+    .opcoes {
+        margin-right:auto;
+        margin-top:10px;
+    }
+    .container__texto {
+        display:block;
+    }
+}
